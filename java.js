@@ -1,17 +1,46 @@
-const playerSelection = prompt("Choose one").toUpperCase() //**.toUpperCase() used to make all strings Upper case and compere with optons | This make input case insensitive**/
-const computerSelection = getRandomChoice()
-let roundWinner = playRound(playerSelection, computerSelection)
 
 
-console.log (playerSelection)
-console.log (computerSelection)
-console.log (roundWinner)
+for (let i = 0; i < 5; i++) {
+
+let computerSelection = getRandomChoice()
+let playerSelection = 'ROCK' /** prompt("Choose one").toUpperCase() //**.toUpperCase() used to make all strings Upper case and compere with optons | This make input case insensitive**/
+let playerScore = 0
+let computerScore = 0
+
+console.log (`Player Selection: ${playerSelection}`)
+console.log (`Computer Selection: ${computerSelection}`)
+console.log (`Round Result: ${playRound (playerSelection, computerSelection)}`)
+console.log (`Player Score: ${playerScore}`)
+console.log (`Computer Score: ${computerScore}`)
+
+
+function playRound (playerSelection, computerSelection) {
+    if (playerSelection === computerSelection) {
+        
+        return 'tie'      
+    }
+
+    else if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS' ||
+             playerSelection === 'SCISSORS' && computerSelection === 'PAPER' ||
+             playerSelection === 'PAPER' && computerSelection === 'ROCK') { 
+          
+        return 'player'    
+    }    
+
+    else {
+        return 'computer'
+    }
+
+    
+    
+}
+
 
 
 
 /**Computer Choice**/
 function getRandomChoice () {                       
-    let randomNumber = Math.floor(Math.random() * 3);
+    let randomNumber = Math.floor(Math.random() * 3); /*Get 3 random numbers*/
     switch (randomNumber) {
         case 0:
             return 'ROCK'
@@ -22,23 +51,8 @@ function getRandomChoice () {
     }  
 }
 
-
-function playRound (playerSelection, computerSelection) {
-    if (playerSelection === computerSelection) {
-        return "Thats a tie"
-    }
-    else if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS' ||
-             playerSelection === 'SCISSORS' && computerSelection === 'PAPER' ||
-             playerSelection === 'PAPER' && computerSelection === 'ROCK') { 
-
-        return `You Win! ${playerSelection} beats ${computerSelection.toLowerCase()}`
-        
-    }    
-    else {
-        return `You loose! ${computerSelection} beats ${playerSelection.toLowerCase()}`
-    }
-    
 }
+
 
 
 

@@ -12,9 +12,9 @@
     <h2>Choose your weapon!</h2>
 
     <div class="main-box">
-        <button class="rock">Rock</button>
-        <button class="paper">Paper</button>
-        <button class="scissors">Scissors</button>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
 
     </div>
 
@@ -23,7 +23,26 @@
         <div class="computer-score">Computer Score is :</div>
     </div>
 
+
+    <!--Buttom testing-->
+
+    <button id="1" onClick="reply_click(this.id)">B1</button>
+    <button id="2" onClick="reply_click(this.id)">B2</button>
+    <button id="3" onClick="reply_click(this.id)">B3</button>
+
+    <script type="text/javascript">
+
+        function reply_click(clicked_id)
+        {
+            alert(clicked_id);
+        }
+
+    </script>
+
+    <!--Game - Java-->
     <script src="./java.js"></script>
+
+
 
 </body>
 </html>

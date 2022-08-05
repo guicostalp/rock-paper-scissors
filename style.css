@@ -1,29 +1,89 @@
 body {
-    background-color: rgb(128, 123, 123);
-
-}
-.flex-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(#504f4f, rgba(104,104,104, 0.678));
+    width: 100vw;
+    height: 100vh;
+    overflow-x:hidden; /*Hide scrol bar on the bottom*/
+    overflow-y: hidden; /*Hide scrol bar on the side*/
+    color: white;
+    text-shadow: 0 0 4px black;
 }
 
-button {
-    width: 150px;
-    height: auto;
-    background-color: rgb(150, 153, 156);
-    border-radius: 3px;
-    font-size: large;
+.choices {
+
+    display: flex;
+    width: 8vw;
+    justify-content: space-around;
+    margin-top: 200px;
+    position: absolute;
+    z-index: 1;
 
 }
 
-img:hover {
+.playerImgs,
+.computerImgs {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.048);
+    padding: 20px;
+    border: solid black;
+    border-radius: 10px;
+    max-height: 90px;
+    
+}
+
+img {
+
+    width: 90px;
+    height: 90px;
+}
+
+.pImg:hover {
     cursor: pointer;
+    width: 110px;
+    height: 110px;
+
+}
+
+.active {
+
+    width: 110px;
+    height: 110px;
+    border: 2px solid black;
+    border-radius: 5px;    
+}
+
+.winner {
+    width: 100%;
 }
 
 .reset {
-
     display: none;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    background-color: rgba(226, 212, 133, 0.247);
+    color: black;
+    font-size: x-large;
+    border: 1px solid black;
+    border-radius: 5px;
     
+
+}
+
+.reset:hover {
+    cursor: pointer;
+
+}
+
+.winnerDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }

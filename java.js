@@ -17,6 +17,7 @@ function resetGame () {
     document.querySelector(".winner").textContent = ""
     document.querySelector(".playerChoice").textContent = ""
     document.querySelector(".computerChoice").textContent = ""
+    document.querySelector(".result").textContent = "Choose your weapon!"
     document.querySelector(".reset").style.display = "none"
 
     console.clear();

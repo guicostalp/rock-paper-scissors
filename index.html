@@ -4,45 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor - Project</title>
+    <title>Rock Paper Scissors - Odin Project</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Paper Rock and Scissors Game!</h1>
-    <h2>Choose your weapon!</h2>
 
-    <div class="main-box">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
+    <div class="score">
+        <h1 class="ties">Ties: 0</h1>
+        <h2 class="result">Choose your weapon!</h2>
+        
+    </div>
+
+    <div class="winnerDiv">
+        <h1 class="winner"></h1>
+        <button class="reset" onclick="resetGame()">Play Again?</button>
+    </div>
+
+    <div class="playerSelection">
+        <h3 class="playerChoice"></h3>
+        <h3 class="playerScore">Player Score: 0</h3>
+        <div class="playerImgs">
+            <img src="./images/rock.png" alt="Rock" class="pImg" id="rock">
+            <img src="./images/paper.png" alt="Paper" class="pImg" id="paper">
+            <img src="./images/scissors.png" alt="Scissors" class="pImg" id="scissors">
+
+            
+        </div>
 
     </div>
 
-    <div class="score-box">
-        <div class="player-score">Player Score is :</div>
-        <div class="computer-score">Computer Score is :</div>
+    <div class="computerSelection">
+        <h3 class="computerChoice"></h3>
+        <h3 class="computerScore">Computer Score: 0</h3>
+        <div class="computerImgs">
+            <img src="./images/rock.png" alt="Rock" class="rock">
+            <img src="./images/paper.png" alt="Paper" class="paper">
+            <img src="./images/scissors.png" alt="Scissors" class="scissors">
+        </div>
+
     </div>
-
-
-    <!--Buttom testing-->
-
-    <button id="1" onClick="reply_click(this.id)">B1</button>
-    <button id="2" onClick="reply_click(this.id)">B2</button>
-    <button id="3" onClick="reply_click(this.id)">B3</button>
-
-    <script type="text/javascript">
-
-        function reply_click(clicked_id)
-        {
-            alert(clicked_id);
-        }
-
-    </script>
-
-    <!--Game - Java-->
-    <script src="./java.js"></script>
-
-
 
 </body>
+
+<script src="./java.js"></script>
+
 </html>
